@@ -10,4 +10,4 @@ A PU Learning-Based Malicious Domain Detection Framework
 # 项目组织结构：
 1. Feature Extraction
 2. Feature Selection
-3. PUMD
+3. Two-Step PU Learning
