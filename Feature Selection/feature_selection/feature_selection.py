@@ -34,12 +34,12 @@ class PIFS():
 
     def getF1Score(self,dataTrain,labelTrain,dataValid,labelValid):
         #归一化数值
-        scaler = StandardScaler().fit(dataTrain)
-        dataTrain = scaler.transform(dataTrain)
-        dataValid = scaler.transform(dataValid)
+        # scaler = StandardScaler().fit(dataTrain)
+        # dataTrain = scaler.transform(dataTrain)
+        # dataValid = scaler.transform(dataValid)
 
         if self.flag =='normal':
-            thisModel = self.classifier.fit(self.dataTrain, self.labelTrain)
+            thisModel = self.classifier.fit(dataTrain, labelTrain)
             y_pred = thisModel.predict(dataValid)
             f1score = f1_score(labelValid, y_pred)
         else:#PUMD
@@ -224,31 +224,3 @@ class PIFS():
         end = time.time()
         self.df_log.to_csv(r'feature_selection_'+str(end)+r'saveLog.csv',index=False)
         return self.baseline, self.feature_list, feature_index
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
