@@ -224,3 +224,31 @@ class PIFS():
         end = time.time()
         self.df_log.to_csv(r'feature_selection_'+str(end)+r'saveLog.csv',index=False)
         return self.baseline, self.feature_list, feature_index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
